@@ -1,5 +1,5 @@
-#ifndef _POORMALLOC_H
-#define _POORMALLOC_H
+#ifndef _MYMALLOC_H
+#define _MYMALLOC_H
 
 #include <stddef.h>
 
@@ -7,7 +7,7 @@
 
 struct metadata {
 	size_t size;
-    unsigned char is_free;
+	unsigned char is_free;
 
 	struct metadata *next;
 };
@@ -16,4 +16,4 @@ void* myalloc(size_t size);
 void myfree(void *ptr);
 
 
-#endif /* _POORMALLOC_H */
+#endif /* _MYMALLOC_H */
